@@ -232,6 +232,18 @@ body{background:#fff8ef;color:#26394c}
 .submit-feedback{font-size:12px;color:#6f8993;margin:14px 0 0;line-height:1.6}
 @media(max-width:700px){.wish-card-grid{grid-template-columns:1fr;max-width:430px}.wishes-toolbar{align-items:flex-start;flex-direction:column}.student-wish-card,.student-wish-inner{min-height:195px}.student-note-panel .note-actions button{width:100%}}
 
+
+/* Fix student wish flashcards: make the inline span wrappers fill each grid cell */
+.wish-card-grid{width:100%;align-items:stretch}
+.student-wish-card{display:block;width:100%;min-width:0;min-height:220px;position:relative}
+.student-wish-inner{display:block;width:100%;min-width:0;height:100%;min-height:220px;position:relative}
+.student-wish-face{width:100%;min-width:0;box-sizing:border-box}
+.student-wish-front strong{max-width:100%;overflow-wrap:anywhere}
+.student-wish-back{overflow-wrap:anywhere}
+@media(max-width:700px){
+  .student-wish-card,.student-wish-inner{width:100%;min-height:195px}
+}
+
 </style>
 </head>
 <body>
